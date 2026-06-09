@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rica — Computer Vision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="c"></div>
+<div id="cr"></div>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Based in Paris</div>
+    <h1 class="hero-name">
+      Rica Mouele
+      <em>Seeing deeper.</em>
+    </h1>
+    <div class="hero-links">
+      <a class="hero-link" href="https://www.linkedin.com/in/rica-mouele/" target="_blank"><span>LinkedIn ↗</span></a>
+      <a class="hero-link" href="https://github.com/RicaMl" target="_blank"><span>GitHub ↗</span></a>
+      <div class="cv-wrap">
+        <button class="cv-btn" id="cvBtn" onclick="toggleCV()">
+          <span>Resume (CV)</span>
+          <span class="cv-chevron" id="cvChevron">▼</span>
+        </button>
+        <div class="cv-dropdown" id="cvDropdown">
+          <a class="cv-option" href="resume-en.pdf" target="_blank">En ↗</a>
+          <a class="cv-option" href="resume-fr.pdf" target="_blank">Fr ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="scroll-hint">Scroll to explore</div>
+    <div class="hero-num">Paris, 2026</div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="sec-header reveal">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">About <em>me</em></h2>
+  </div>
+  <div class="about-grid reveal">
+    <p class="about-text">
+      Hi there — I'm <strong>Rica</strong> <br><br>
+      I'm a computer vision and AI student based in Paris.
+      I pivoted from backend development into the world of
+      <strong>matrices and tensors</strong>, and found my obsession
+      in teaching machines to see and understand visual data.
+    </p>
+    <div class="about-aside">
+      <div class="about-detail">
+        <span class="detail-label">Location</span>
+        <span class="detail-value">Paris, France</span>
+      </div>
+      <div class="about-detail">
+        <span class="detail-label">Focus</span>
+        <span class="detail-value">Computer Vision · Deep Learning · Machine Learning · Data </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="sec-header reveal">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title"><em>Projects</em></h2>
+  </div>
+  <div class="projects-grid reveal">
+
+    <div class="pcard" onclick="openModal('p1')">
+      <img class="pcard-img" src="./images/img2.png" alt="Euro Coin Detection">
+      <div class="pcard-overlay">
+        <div class="overlay-label">Computer Vision</div>
+        <div class="overlay-title">Click to explore →</div>
+      </div>
+      <div class="pcard-bar">
+        <span class="pcard-name">Euro Coin Detection</span>
+        <span class="pcard-tag">CV & DL</span>
+      </div>
+    </div>
+
+    <div class="pcard" onclick="openModal('p2')">
+      <img class="pcard-img" src="./images/bdshape_part.png" alt="Pattern Recognition">
+      <div class="pcard-overlay">
+        <div class="overlay-label">Pattern Recognition</div>
+        <div class="overlay-title">Click to explore →</div>
+      </div>
+      <div class="pcard-bar">
+        <span class="pcard-name">Shape Descriptor Evaluation</span>
+        <span class="pcard-tag">ML & Geometry</span>
+      </div>
+    </div>
+
+    <div class="pcard" onclick="openModal('p3')">
+      <img class="pcard-img" src="./images/distill2.png" alt="CLIP Knowledge Distillation">
+      <div class="pcard-overlay">
+        <div class="overlay-label">Research & Deep Learning</div>
+        <div class="overlay-title">Click to explore →</div>
+      </div>
+      <div class="pcard-bar">
+        <span class="pcard-name">CLIP Knowledge Distillation</span>
+        <span class="pcard-tag">VLM & Compression</span>
+      </div>
+    </div>
+
+    <div class="pcard" onclick="openModal('p4')">
+      <img class="pcard-img" src="./images/detection_anom.png" alt="Satellite Thermal Anomaly Detection">
+      <div class="pcard-overlay">
+        <div class="overlay-label">Space Systems & AI</div>
+        <div class="overlay-title">Click to explore →</div>
+      </div>
+      <div class="pcard-bar">
+        <span class="pcard-name">Satellite Anomaly Detection</span>
+        <span class="pcard-tag">OpenCV & Isolation Forest</span>
+      </div>
+    </div>
+
+    <div class="pcard" onclick="openModal('p5')">
+      <img class="pcard-img" src="./images/Information_Retrieval.jpg" alt="Information Retrieval Engine">
+      <div class="pcard-overlay">
+        <div class="overlay-label">Information Retrieval & NLP</div>
+        <div class="overlay-title">Click to explore →</div>
+      </div>
+      <div class="pcard-bar">
+        <span class="pcard-name">Multi-Domain Semantic IR Engine</span>
+        <span class="pcard-tag">FAISS & NLP</span>
+      </div>
+    </div>
+
+    <div class="pcard" onclick="openModal('p6')">
+      <img class="pcard-img" src="./images/surface_meshing_base.png" alt="Surface Meshing & Curvature Analysis">
+      <div class="pcard-overlay">
+        <div class="overlay-label">3D Geometry & Mesh Processing</div>
+        <div class="overlay-title">Click to explore →</div>
+      </div>
+      <div class="pcard-bar">
+        <span class="pcard-name">Surface Meshing & Topology Metrics</span>
+        <span class="pcard-tag">3D Geometry & NumPy</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="research">
+  <div class="sec-header reveal">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">Research <em>interests</em></h2>
+  </div>
+  <div class="reveal">
+    <a class="paper" href="https://arxiv.org/pdf/1503.03832" target="_blank">
+      <span class="paper-idx">01</span>
+      <div class="paper-body">
+        <div class="paper-title">FaceNet: A Unified Embedding for Face Recognition and Clustering</div>
+        <div class="paper-authors">Florian Schroff, Dmitry Kalenichenko, James Philbin · 2015</div>
+      </div>
+      <span class="paper-arrow">↗</span>
+    </a>
+    <a class="paper" href="https://arxiv.org/pdf/1602.00763" target="_blank">
+      <span class="paper-idx">02</span>
+      <div class="paper-body">
+        <div class="paper-title">Simple Online and Realtime Tracking</div>
+        <div class="paper-authors">Alex Bewley, Zongyuan Ge, Lionel Ott, Fabio Ramos, Ben Upcroft · 2016</div>
+      </div>
+      <span class="paper-arrow">↗</span>
+    </a>
+    <a class="paper" href="https://arxiv.org/pdf/1609.04802" target="_blank">
+      <span class="paper-idx">03</span>
+      <div class="paper-body">
+        <div class="paper-title">Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network</div>
+        <div class="paper-authors">Christian Ledig et al. · 2017</div>
+      </div>
+      <span class="paper-arrow">↗</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Rica Mouele · Paris</span>
+  <span>Portfolio</span>
+</footer>
+
+<div class="mbackdrop" id="mbackdrop" onclick="closeOutside(event)">
+  <div class="modal" id="modal">
+    <button class="mclose" onclick="closeModal()">✕</button>
+    <div class="modal-body">
+      <div class="modal-left">
+        <div id="mcat" class="modal-cat"></div>
+        <div id="mtitle" class="modal-title"></div>
+        <div id="mdesc" class="modal-desc"></div> <div id="mlinks" class="modal-links"></div>
+      </div>
+      <div class="modal-right" id="mgallery">
+        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// --- CURSOR & ANIMATIONS ---
+const c = document.getElementById('c'), cr = document.getElementById('cr');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; c.style.left = mx + 'px'; c.style.top = my + 'px'; });
+(function loop() { rx += (mx - rx) * .1; ry += (my - ry) * .1; cr.style.left = rx + 'px'; cr.style.top = ry + 'px'; requestAnimationFrame(loop); })();
+document.querySelectorAll('a, button, .pcard').forEach(el => {
+  el.addEventListener('mouseenter', () => { c.style.width = '12px'; c.style.height = '12px'; });
+  el.addEventListener('mouseleave', () => { c.style.width = '6px'; c.style.height = '6px'; });
+});
+
+const obs = new IntersectionObserver(e => { e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); }); }, { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+function toggleCV() {
+  document.getElementById('cvBtn').classList.toggle('open');
+  document.getElementById('cvDropdown').classList.toggle('open');
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.cv-wrap')) {
+    document.getElementById('cvBtn').classList.remove('remove');
+    document.getElementById('cvDropdown').classList.remove('open');
+  }
+});
+
+// --- INDEPENDENT PROJECTS CONFIGURATION ---
+const projects = {
+  p1: { 
+    cat: 'Computer Vision & Deep Learning', 
+    title: 'Euro Coin Detection & Dual-Pipeline Valuation', 
+    desc: `
+      <strong>The Challenge</strong><br>
+      How do we count and identify currency efficiently? This project benchmarks 
+      <strong>Traditional Mathematics</strong> against modern <strong>Deep Learning</strong> 
+      to explore the boundaries of both approaches.<br><br>
+
+      <strong>Pipeline 1: Traditional Image Analysis (No AI)</strong>
+      <ul>
+        <li>Shape Detection:<em> Hough Circle Transform</em> using edge gradients to isolate round geometry.</li>
+        <li>Color Inspection (The HSV Trick): Isolates <strong>Hue (H)</strong> and <strong>Saturation (S)</strong> channels to distinguish copper from gold, and detect bimetallic rings (1€/2€).</li>
+        <li>Scale-Free Valuation: A relative "Ratio Voting" strategy based on real-world coin diameters.</li>
+      </ul>
+      <strong>Pipeline 2: Deep Learning Shift (AlexNet)</strong>
+      <ul>
+        <li>Architecture: Custom <em>AlexNet CNN</em> trained across 315 coin types (69% Test Accuracy).</li>
+        <li>The Fine-Grained Limit: Revealed a real-world edge case—the network struggled with Euro coins (0% accuracy on certain 50-cent variants) because they share identical faces and only differ by tiny, country-specific national backs.</li>
+      </ul>
+      <strong>Key Takeaway</strong><br>
+      Classical methods offer perfect interpretability and lightweight execution but break under glares. Deep Learning provides massive structural robustness but demands advanced fine-grained attention to catch microscopic currency details.
+    `, 
+    links: [
+      { t: 'GitHub Repository 1 ↗', u: 'https://github.com/RicaMl/ProjetAnalyseImageMoney' },
+      { t: 'GitHub Repository 2 ↗', u: 'https://github.com/RicaMl/DL4CV_Coin_classification2' }
+    ],
+    gallery: [
+      { src: './images/1_2_EUROS_HUE.png', caption: 'HSV Color Space Channels Isolation for Bimetallic & Copper Detection' },
+      { src: './images/detection.png ', caption: 'Circles Detection and Count' },
+      { src: './images/detection3.png', caption: 'Circles Detection and Count' }
+    ] 
+  },
+
+  p2: { 
+    cat: 'Pattern Recognition & Machine Learning', 
+    title: 'Shape Recognition & Feature Descriptor Evaluation', 
+    desc: `
+      <strong>The Goal</strong><br>
+      How do classical mathematical signatures handle shape distortions? This project evaluates 5 traditional geometric descriptors (Fourier, Ellipticity, Angular Signatures, and Distortion Forces) on <strong>BDshape</strong>, a binary dataset featuring heavy occlusions and structural noise.<br><br>
+
+      <strong>The Pipeline</strong><br>
+      Instead of using raw images, we classified the extracted feature vectors using three distinct strategies:
+      • <strong>Supervised:</strong> Optimized <em>k-NN</em> classifiers (via GridSearchCV).<br>
+      • <strong>Unsupervised:</strong> <em>k-Means (Dynamic Clouds)</em> to analyze natural class clustering.<br>
+      • <strong>Ensemble:</strong> A <em>Majority/Soft Voting</em> fusion layer combining all 5 models.<br><br>
+
+      <strong>Key Takeaway</strong><br>
+      Evaluated via Precision/Recall curves and Confusion Matrices, the project benchmarks where individual geometric signatures fail due to high intra-class heterogeneity, and demonstrates how an ensemble multi-expert vote stabilizes decision boundaries.
+      `, 
+    links: [
+      { t: 'GitHub Repository ↗', u: 'https://github.com/RicaMl/Reconnaissance_de_formes_projet' }
+    ],
+    gallery: [
+      { src: './images/bdshape_all.png', caption: 'The BDshape Dataset: 9 complex binary classes showcasing occlusions, distortions, and partial views.' },
+      { src: './images/bdshape_curve_vote.png', caption: 'Evaluation: PR Curve for Majority  Voting across 9 Classes.' }
+    ] 
+  },
+
+  p3: { 
+    cat: 'Deep Learning & Research', 
+    title: 'CLIP-KD: Knowledge Distillation for Marine Vision-Language Models', 
+    desc: `
+      <strong>The Goal</strong><br>
+      How do we deploy large Vision-Language Models (VLMs) on resource-constrained edge devices? This research project studies <strong>Knowledge Distillation (KD)</strong> frameworks to compress a massive CLIP model into a compact student network for underwater image-text retrieval.<br><br>
+
+      <strong>The Methodology</strong>
+      <ul>
+        <li><strong>Teacher-Student Setup:</strong> Distilling a fine-tuned <em>ViT-B/16</em> (Teacher) into a lightweight <em>ResNet-50</em> (Student) using the marine <strong>FathomNet</strong> dataset.</li>
+        <li><strong>Distillation Strategies:</strong> Implemented a multi-loss optimization layer combining <strong>Feature Distillation (FD)</strong>, <strong>Interactive Contrastive Learning (ICL)</strong>, and Custom Contrastive KD.</li>
+        <li><strong>VLM Caption Engineering:</strong> Generation of legends with GPT-4o mini Model from Openai.</li>
+      </ul>
+
+      <strong>Key Takeaway & Results</strong><br>
+      Evaluated on unseen underwater species (Zero-Shot), the fine-tuned teacher reached <strong>85.7% accuracy</strong>, while our compressed student successfully out-performed the non-adapted baseline by +14.3 points. The project successfully benchmarks the efficiency limits of multimodal distillation in highly specialized scientific domains.
+    `, 
+    links: [
+      { t: 'GitHub Repository ↗', u: 'https://github.com/RicaMl/CLIP-KD' }
+    ],
+    gallery: [
+      { src: './images/distill.jpeg', caption: 'Distillation Global Architecture.' },
+      { src: './images/animal_label.png', caption: 'Dataset Engineering: Specialized marine images from the FathomNet API paired with VLM-generated descriptions.' },
+    ] 
+  },
+
+  p4: { 
+    cat: 'Space Systems & Unsupervised AI', 
+    title: 'Satellite Payload Thermal Anomaly Detection', 
+    desc: `
+      <strong>The Goal</strong><br>
+      How do we monitor satellite payload health autonomously in space? This R&D project builds an automated telemetry pipeline to detect, segment, and classify thermal anomalies on satellite infrared calibration images.<br><br>
+
+      <strong>The Engineering Stack</strong>
+      <ul>
+        <li><strong>Synthetic Simulation:</strong> Built a custom generator simulating orbit environments (photon noise, hot pixels, overheating thermal gradients).</li>
+        <li><strong>OpenCV Computer Vision:</strong> Implemented adaptive thresholding, morphological closures, and contour extraction to segment suspicious Regions of Interest (ROIs).</li>
+        <li><strong>Unsupervised Isolation Forest:</strong> Trained an outlier-detection model on geometric and thermal feature vectors (area, max/mean temperature, circularity) to separate normal fluctuations from true critical failures.</li>
+      </ul>
+
+      <strong>Key Takeaway & Analytics</strong><br>
+      Reaching an <strong>83% detection accuracy</strong> on critical anomalies, the system outputs a real-time flight diagnosis dashboard complete with confusion matrices, decision boundaries (Area vs. Max Temp), and fully annotated bounding boxes mapping nominal vs. critical zones.
+    `, 
+    links: [
+      { t: 'GitHub Repository ↗', u: 'https://github.com/RicaMl/Thermal_Image_Anomaly_Detection' }
+    ],
+    gallery: [
+      { src: './images/thermal-simulation-mask.png', caption: 'Synthetic Infrared Telemetry Simulation & Morphological Binary Masks.' },
+      { src: './images/isolation-forest-boundary.png', caption: 'Isolation Forest Decision Boundary (Area vs. Maximum Temperature Features).' },
+      { src: './images/satellite-flight-diagnosis.png', caption: 'Final Flight-Condition Diagnostics — Annotated Test Frame marking Critical vs Nominal regions.' }
+    ] 
+  },
+
+  p5: { 
+    cat: 'Information Retrieval & NLP', 
+    title: 'Hybrid Semantic Search & Classifier-Guided Retrieval Engine', 
+    desc: `
+      <strong>The Goal</strong><br>
+      How do we scale high-precision semantic search across massive, multi-domain text corpora without destroying latency? This project builds a production-grade, two-phase Information Retrieval (IR) system designed to index, retrieve, and rank documents from a dataset of <strong>216,000 multi-domain documents</strong>.<br><br>
+
+      <strong>The Architecture</strong>
+      <ul>
+        <li><strong>Dense Embedding Indexing:</strong> Encoded document text fields using state-of-the-art <em>BAAI/bge-base-en-v1.5</em> embeddings, mapped into high-performance <strong>FAISS sub-indexes</strong> for sub-millisecond lookups.</li>
+        <li><strong>Classifier-Guided Expert Mode:</strong> Built a <em>LinearSVC + SMOTE</em> query domain classifier (97.1% cross-validation accuracy). If classification confidence exceeds 80%, the system locks search into specialized sub-indexes, drastically cutting down the search space and eliminating fatal cross-domain errors.</li>
+        <li><strong>Lexical & Hybrid Fusions:</strong> Benchmarked traditional <em>BM25+</em> and <em>TF-IDF</em> pipelines against dense retrieval, evaluating Reciprocal Rank Fusion (RRF) for multi-perspective ranking.</li>
+      </ul>
+
+      <strong>Key Takeaway & Benchmarks</strong><br>
+      The architecture successfully proves that **Dense Embeddings + Classifier Guided-Routing** outperforms complex hybrid fusions, achieving a massive **70.76% Recall@20** and **52.02% MRR** while reducing operational latency down to an ultra-fast **30.6 ms**.
+    `, 
+    links: [
+      { t: 'GitHub Repository ↗', u: 'https://github.com/RicaMl/Retrieval_Engine' }
+    ],
+    gallery: [
+      { src: './images/umap-embedding-space.png', caption: 'High-Dimensional Clustering: 2D UMAP projection of document embedding distributions across the 5 domains.' },
+      { src: './images/ir-performance-benchmark.png', caption: 'Performance Benchmarks: Latency (ms) vs. MRR comparison proving the efficiency of Classifier-Guided Dense Search.' }
+    ] 
+  },
+  p6: { 
+    cat: '3D Geometry & Mesh Processing', 
+    title: 'Surface Meshing Exploration & Topology Metrics Engine', 
+    desc: `
+      <strong>The Goal</strong><br>
+      How do algorithms analyze and evaluate 3D shapes accurately? This project implements a geometric processing pipeline using <em>trimesh</em> to generate 3D primitives, evaluate structural mesh quality, and compute discrete differential geometry properties.<br><br>
+
+      <strong>The Technical Stack</strong>
+      <ul>
+        <li><strong>Primitive Generation & Analysis:</strong> Synthesized and evaluated parametric 3D manifolds (spheres, cylinders, planes, tori) to map structural topology behavior.</li>
+        <li><strong>Quality Metric Optimization:</strong> Developed algorithmic functions to calculate triangle element deformation via <strong>Aspect Ratio</strong>, <strong>Skewness</strong>, and interior angles.</li>
+        <li><strong>Discrete Differential Geometry:</strong> Implemented the <strong>Angular Defect Method</strong> to estimate discrete Gaussian Curvature ($K$), creating statistical shape signatures to isolate geometric properties (flat, positive, or negative regions).</li>
+      </ul>
+
+      <strong>Key Takeaway & Convergence</strong><br>
+      Through rigorous benchmarking, the project mathematically demonstrates the <strong>quadratic convergence</strong> of curvature error relative to mesh face density. The extracted curvature histograms establish a highly predictive feature vector, laying the foundation for 3D shape segmentation using Geometric Deep Learning (GNNs & PointNet).
+    `, 
+    links: [
+      { t: 'GitHub Repository ↗', u: 'https://github.com/RicaMl/Surface_Meshing/tree/main' }
+    ],
+    gallery: [
+      { src: './images/surface_meshing_gauss1.png', caption: '3D Primitive Generation and Discrete Gaussian Curvature ($K$) Mapping.' },
+      { src: './images/surface_meshing_gauss2.png', caption: '3D Primitive Generation and Discrete Gaussian Curvature ($K$) Mapping.' },
+      { src: './images/surface_meshing_signature.png', caption: 'Curvature signature by primitive.' }
+    ] 
+  },
+};
+
+// --- MODAL ENGINE ---
+function openModal(id) {
+  const p = projects[id]; 
+  if (!p) return;
+  
+  document.getElementById('mcat').textContent = p.cat;
+  document.getElementById('mtitle').textContent = p.title;
+  
+  // FIX: Utilisation de innerHTML pour interpréter correctement le formattage (strong, br, etc.)
+  document.getElementById('mdesc').innerHTML = p.desc; 
+
+  const ml = document.getElementById('mlinks'); 
+  ml.innerHTML = '';
+  p.links.forEach(l => {
+    const a = document.createElement('a');
+    a.className = 'mlink'; a.href = l.u; a.target = '_blank'; a.textContent = l.t;
+    ml.appendChild(a);
+  });
+
+  const mg = document.getElementById('mgallery'); 
+  mg.innerHTML = '';
+  const hasGallery = p.gallery && p.gallery.length > 0;
+  
+  document.getElementById('modal').querySelector('.modal-body')
+    .classList.toggle('no-gallery', !hasGallery);
+  mg.style.display = hasGallery ? '' : 'none';
+
+  (p.gallery || []).forEach(item => {
+    const wrap = document.createElement('div');
+    const img = document.createElement('img');
+    img.className = 'modal-gallery-img'; 
+    img.src = item.src; 
+    img.alt = item.caption || '';
+    wrap.appendChild(img);
+    
+    if (item.caption) {
+      const cap = document.createElement('p');
+      cap.className = 'modal-gallery-caption'; 
+      cap.textContent = item.caption;
+      wrap.appendChild(cap);
+    }
+    mg.appendChild(wrap);
+  });
+
+  document.getElementById('mbackdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() { 
+  document.getElementById('mbackdrop').classList.remove('open'); 
+  document.body.style.overflow = ''; 
+}
+function closeOutside(e) { 
+  if (e.target === document.getElementById('mbackdrop')) closeModal(); 
+}
+document.addEventListener('keydown', e => { 
+  if (e.key === 'Escape') closeModal(); 
+});
+</script>
+
+</body>
+</html>
